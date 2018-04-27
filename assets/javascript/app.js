@@ -2,11 +2,12 @@
 var correct = 0
 var incorrect = 0
 var unanswered = 0
-var number = 30;
+var number = 60;
 var intervalId;
 
 $(document).ready(function () {
     $("#form").hide()
+    $("#timeRemaining").hide()
     //create start screen
     function renderStartButton() {
 

@@ -1,0 +1,95 @@
+body {
+    font-size: 18px;
+    font-family: "Roboto Slab",serif;
+    text-align: center;
+    background-image: url(../images/sports.jpg);
+    
+    font-weight: 600;
+    
+}
+.containerGame{
+    border: 2px solid rgba(0, 204, 255, .98);
+    border-radius: 5px;
+    margin: auto;
+    width:85%;
+    margin-top: 25px;
+}
+header {
+    background-color: rgba(0, 204, 255, .98);
+    font-size: 30px;
+    font-weight: 800 ;
+    margin-top: 25px;
+    padding:20px;
+}
+#begin{
+   background-color: rgba(0, 204, 255, .98);
+    padding:10px;
+}
+#end{
+    background-color:hsla(0, 0%, 82%, 0.98);
+    padding:10px;
+    
+}
+#timeRemaining{
+    
+    border-radius: 5px;
+    padding: 15px;
+    background-color: hsla(355, 100%, 50%, 0.98)
+}
+#instructions{
+    line-height: 40px;
+    background-color:rgba(0, 204, 255, .98);
+}
+.startButton {
+    padding:10px;
+    font-size:18px;
+    width:200px;
+    background-color: forestgreen;
+
+}
+
+
+button{
+    color:white;
+}
+
+.submitButton{
+    padding:10px;
+    font-size:18px;
+    width:200px;
+    background-color: forestgreen;
+
+}
+#form{
+    line-height: 40px;
+
+}
+
+.question1{
+    background-color: hsla(0, 0%, 82%, .98)
+}
+.question2{
+    background-color: rgba(0, 204, 255, .98);
+}
+.question3{
+    background-color: hsla(0, 0%, 82%, 0.98)
+}
+.question4{
+    background-color:rgba(0, 204, 255, .98);
+}
+.question5{
+    background-color: hsla(0, 0%, 82%, 0.98)
+}
+.question6{
+    background-color:rgba(0, 204, 255, .98);
+}
+.question7{
+    background-color: hsla(0, 0%, 82%, 0.98)
+}
+.question8{
+    background-color: rgba(0, 204, 255, .98);
+}
+#scoreBoard {
+    background-color: rgba(0, 204, 255, .98);
+    line-height: 75px;
+}
