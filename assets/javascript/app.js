@@ -1,4 +1,4 @@
-//variables for scoreboard
+///variables for scoreboard
 var correct = 0
 var incorrect = 0
 var unanswered = 0
@@ -44,7 +44,14 @@ $(document).ready(function () {
             //show questions on click 
             // get value of clicks 
             
-            var selValue1 = $("input[name=quest1]:checked").val();
+            
+            displayScoreboard()
+            
+        
+        })
+    }
+    function displayScoreboard(){
+        var selValue1 = $("input[name=quest1]:checked").val();
             console.log(selValue1)
             //check to see if value is correct
             if (selValue1 == 2) {
@@ -141,12 +148,6 @@ $(document).ready(function () {
             {
                 incorrect++;
             }
-            displayScoreboard()
-            
-        
-        })
-    }
-    function displayScoreboard(){
         $("#form").hide()
         $("#timeRemaining").hide()
     //console log correct
@@ -197,18 +198,3 @@ $(document).ready(function () {
       }
 
     })
-
-
-
-
-
-
-  
- 
-
-  
-
-
-
-
-
