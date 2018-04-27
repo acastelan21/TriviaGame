@@ -4,6 +4,7 @@ var incorrect = 0
 var unanswered = 0
 
 $(document).ready(function () {
+    $("#form").hide()
     //create start screen
     function renderStartButton() {
 
@@ -17,20 +18,28 @@ $(document).ready(function () {
         // hide questions until start has been pressed 
     }
     renderStartButton()
-    //question screen
-    function renderSubmitButton() {
+    $("#begin").on("click", function (event) {
+        event.preventDefault();
+        $("#form").show()
+        renderSubmitButton()
+    })
 
-        var a = $("<button>");
-        // Adding a class of startbutton to our button
-        a.addClass("submitButton");;
-        // Providing the initial button text
-        a.text("Submit");
-        // Adding the button to the buttons-view div
-        $("#end").append(a);
-        // hide questions until start has been pressed
-        
-    }
-    renderSubmitButton()
+})
+
+
+
+
+
+function renderSubmitButton() {
+
+    var a = $("<button>");
+    // Adding a class of startbutton to our button
+    a.addClass("submitButton");;
+    // Providing the initial button text
+    a.text("Submit");
+    // Adding the button to the buttons-view div
+    $("#end").append(a);
+    // hide questions until start has been pressed
     $("#end").on("click", function (event) {
         event.preventDefault()
         //show questions on click 
@@ -143,9 +152,8 @@ $(document).ready(function () {
         //console log unanswered
         console.log(unanswered)
         $("#unanswered").text("Unanswered: " + unanswered)
-})
+    
+    
+    })
+}
 
-
-
-})
- 
