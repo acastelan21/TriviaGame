@@ -154,14 +154,36 @@ $(document).ready(function () {
     //console log correct
     console.log(correct)
     //write correct to html
-    $("#correct").text("Correct: " + correct)
+    $("#correct").text("Correct: " + correct);
     //console.log (incorrect)
     console.log(incorrect)
     //write incorrect
-    $("#incorrect").text("Incorrect: " + incorrect)
+    $("#incorrect").text("Incorrect: " + incorrect);
     //console log unanswered
     console.log(unanswered)
-    $("#unanswered").text("Unanswered: " + unanswered)
+    $("#unanswered").text("Unanswered: " + unanswered);
+
+    if (correct > 5){
+        var winner = $("<img>");
+        // Adding a class of startbutton to our button
+        winner.attr("src", "./assets/images/great.gif");
+        // Providing the initial button text
+        
+        // Adding the button to the buttons-view div
+        $("#scoreBoard").append(winner);
+    }
+     if ((correct > 3) && (correct < 6)){
+        var okay = $("<img>");
+        okay.attr("src", "./assets/images/notbad.gif");
+        $("#scoreBoard").append(okay);
+
+    }
+    if (correct < 3){
+        var bad = $("<img>");
+        bad.attr("src", "./assets/images/giphy.gif");
+        $("#scoreBoard").append(bad);
+    }
+
     }//timer
     
    
