@@ -1,6 +1,7 @@
 //variables for scoreboard
 var correct = 0
 var incorrect = 0
+var unanswered = 0
 
 $(document).ready(function () {
     //create start screen
@@ -40,6 +41,9 @@ $(document).ready(function () {
         if (selValue1 == 2) {
             correct++;
         }
+        else if (selValue1 === undefined){
+            unanswered++;
+        }
         else {
             incorrect++;
         }
@@ -48,6 +52,9 @@ $(document).ready(function () {
         //check to see if value is correct
         if (selValue2 == 4) {
             correct++;
+        }
+        else if (selValue2 === undefined){
+            unanswered++;
         }
         else {
             incorrect++;
@@ -58,6 +65,9 @@ $(document).ready(function () {
         if (selValue3 == 3) {
             correct++;
         }
+        else if (selValue3 === undefined){
+            unanswered++;
+        }
         else {
             incorrect++;
         }
@@ -66,6 +76,9 @@ $(document).ready(function () {
         //check to see if value is correct
         if (selValue4 == 4) {
             correct++;
+        }
+        else if (selValue4 === undefined){
+            unanswered++;
         }
         else {
             incorrect++;
@@ -76,6 +89,9 @@ $(document).ready(function () {
         if (selValue5 == 1) {
             correct++;
         }
+        else if (selValue5 === undefined){
+            unanswered++;
+        }
         else {
             incorrect++;
         }
@@ -84,6 +100,9 @@ $(document).ready(function () {
         //check to see if value is correct
         if (selValue6 == 3) {
             correct++;
+        }
+        else if (selValue6 === undefined){
+            unanswered++;
         }
         else {
             incorrect++;
@@ -94,6 +113,9 @@ $(document).ready(function () {
         if (selValue7 == 1) {
             correct++;
         }
+        else if (selValue7 === undefined){
+            unanswered++;
+        }
         else {
             incorrect++;
         }
@@ -103,13 +125,24 @@ $(document).ready(function () {
         if (selValue8 == 4) {
             correct++;
         }
-        else {
+        else if (selValue8 === undefined){
+            unanswered++;
+        }
+        else 
+        {
             incorrect++;
         }
-
+        //console log correct
         console.log(correct)
+        //write correct to html
+        $("#correct").text("Correct: " + correct)
+        //console.log (incorrect)
         console.log(incorrect)
-        
+        //write incorrect
+        $("#incorrect").text("Incorrect: " + incorrect)
+        //console log unanswered
+        console.log(unanswered)
+        $("#unanswered").text("Unanswered: " + unanswered)
 })
 
 
